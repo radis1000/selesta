@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Folder {
+  id           String   @id @default(cuid())
+  name         String
+  webhookId    String
+  webhookToken String
+  createdAt    DateTime @default(now())
+  files        File[]
+}
+
+model File {
+  id           String      @id @default(cuid())
+  name         String
+  extension    String
+  mimeType     String
+  size         BigInt
+  checksum     String
+  webhookId    String
+  webhookToken String
+  totalChunks  Int
+  folderId     String?
+  folder       Folder?     @relation(fields: [folderId], references: [id], onDelete: SetNull)
+  createdAt    DateTime    @default(now())
+  chunks       Chunk[]
+  shares       ShareToken[]
+}
+
+model Chunk {
+  id        String @id @default(cuid())
+  index     Int
+  size      Int
+  messageId String
+  checksum  String
+  fileId    String
+  file      File   @relation(fields: [fileId], references: [id], onDelete: Cascade)
+
+  @@index([fileId, index])
+}
+
+model ShareToken {
+  id        String    @id @default(cuid())
+  token     String    @unique @default(cuid())
+  fileId    String
+  file      File      @relation(fields: [fileId], references: [id], onDelete: Cascade)
+  expiresAt DateTime?
+  createdAt DateTime  @default(now())
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "title": "SplitCord — 由Discord驱动的个人云盘",
+    "description": "通过SplitCord的分块系统，使用Discord存储和管理您的文件。"
+  },
+  "setup": {
+    "brand": "SplitCord",
+    "headline": "由Discord驱动的个人云盘",
+    "subheadline": "通过类似Google Drive的界面上传、整理和下载文件。Discord存储数据，SplitCord统一管理。",
+    "features": {
+      "storage": { "title": "无限存储", "description": "将Discord作为文件后端，无限制使用。" },
+      "chunking": { "title": "智能分块", "description": "文件自动分割为7.5MB的块。" },
+      "manifest": { "title": ".radis清单", "description": "专有格式，忠实还原您的文件。" }
+    },
+    "form": {
+      "title": "配置您的Webhook",
+      "subtitle": "输入您的Discord Webhook URL以开始使用。",
+      "label": "Discord Webhook URL",
+      "placeholder": "https://discord.com/api/webhooks/...",
+      "submit": "连接我的云盘",
+      "submitting": "验证中…",
+      "connected": "已连接",
+      "successMessage": "Webhook已验证 — 正在跳转…",
+      "privacy": "您的Webhook URL仅存储在本地浏览器中。",
+      "helpLink": "如何创建Webhook？",
+      "errors": {
+        "missing": "需要Webhook URL",
+        "invalidFormat": "Discord Webhook URL格式无效",
+        "serverError": "无法联系服务器"
+      }
+    },
+    "guide": {
+      "toggle": "如何获取我的Discord Webhook URL？",
+      "step1Title": "打开服务器设置",
+      "step1Desc": "右键点击Discord服务器 → \"服务器设置\" → \"集成\" → \"Webhooks\"。",
+      "step2Title": "在专用频道创建Webhook",
+      "step2Desc": "点击\"新建Webhook\"，选择专用频道并为其命名。",
+      "step3Title": "复制Webhook URL",
+      "step3Desc": "点击\"复制Webhook URL\"并粘贴到上方字段。",
+      "tip": "提示：创建一个只有您可见的私人频道。上传的文件将作为附件存储在该频道中。"
+    }
+  },
+  "drive": {
+    "loading": "加载中…",
+    "toolbar": {
+      "search": "搜索…",
+      "upload": "上传",
+      "filterLabel": "按类型筛选",
+      "sortLabel": "排序方式",
+      "fileCount": "{count}个文件",
+      "filter": { "all": "所有类型", "image": "图片", "video": "视频", "audio": "音频", "document": "文档", "archive": "压缩包", "other": "其他" },
+      "sort": { "createdAt_desc": "日期 — 最新", "createdAt_asc": "日期 — 最旧", "name_asc": "名称 A→Z", "name_desc": "名称 Z→A", "size_desc": "大小 — 最大", "size_asc": "大小 — 最小" }
+    },
+    "sidebar": { "myDrive": "我的云盘", "storage": "已用存储", "files": "文件", "discordMessages": "Discord消息", "webhookId": "Webhook ID", "disconnect": "断开连接" },
+    "empty": { "title": "您的云盘为空", "description": "上传您的第一批文件。它们将被分块并存储在Discord上。", "cta": "上传文件", "dragHint": "或将文件拖放到页面任意位置", "noResults": "无结果", "noResultsFor": "没有与\"{query}\"匹配的文件", "noResultsType": "此类别中没有文件" },
+    "file": { "download": "下载", "exportRadis": "导出.radis", "rename": "重命名", "share": "分享", "preview": "预览", "copyLink": "复制链接", "moveTo": "移动到", "delete": "删除", "radisExported": ".radis清单已导出" },
+    "list": { "name": "名称", "type": "类型", "size": "大小", "chunks": "块数", "date": "日期" },
+    "upload": { "titleActive": "上传中 ({count})", "titleDone": "上传完成", "clear": "清除", "idle": "等待中", "chunking": "分割中…", "uploading": "{uploaded}/{total} 块", "completing": "完成中…", "done": "完成", "error": "错误" },
+    "delete": { "title": "删除文件", "description": "这将永久删除{name}及其所有Discord消息（{count}块）。此操作不可逆。", "cancel": "取消", "confirm": "删除", "deleting": "删除中…" },
+    "download": { "started": "正在下载\"{name}\"…", "deleted": "\"{name}\"已删除", "fetching": "连接Discord中…", "downloading": "下载中…", "verifying": "验证SHA-256…", "done": "完成", "error": "错误", "checksumMismatch": "完整性受损！" }
+  },
+  "language": { "select": "语言", "fr": "Français", "en": "English", "es": "Español", "de": "Deutsch", "it": "Italiano", "pt": "Português", "ja": "日本語", "zh": "中文" }
+}

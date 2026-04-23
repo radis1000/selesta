@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "title": "SplitCord — Drive personnel propulsé par Discord",
+    "description": "Stockez et gérez vos fichiers via Discord avec le système de chunking SplitCord."
+  },
+  "setup": {
+    "brand": "SplitCord",
+    "headline": "Votre Drive personnel propulsé par Discord",
+    "subheadline": "Uploadez, organisez et téléchargez vos fichiers depuis une interface Google Drive‑like. Discord stocke les données, SplitCord orchestre le tout.",
+    "features": {
+      "storage": { "title": "Stockage illimité", "description": "Utilisez Discord comme backend de fichiers sans limite." },
+      "chunking": { "title": "Chunking intelligent", "description": "Fichiers découpés en segments de 7,5 Mo automatiquement." },
+      "manifest": { "title": "Manifeste .radis", "description": "Format propriétaire pour reconstruire vos fichiers fidèlement." }
+    },
+    "form": {
+      "title": "Configurer votre webhook",
+      "subtitle": "Entrez l'URL de votre webhook Discord pour commencer.",
+      "label": "URL du Webhook Discord",
+      "placeholder": "https://discord.com/api/webhooks/...",
+      "submit": "Connecter mon Drive",
+      "submitting": "Vérification…",
+      "connected": "Connecté",
+      "successMessage": "Webhook vérifié — redirection en cours…",
+      "privacy": "Votre URL webhook est stockée localement dans votre navigateur.",
+      "helpLink": "Comment créer un webhook ?",
+      "errors": {
+        "missing": "URL webhook manquante",
+        "invalidFormat": "Format d'URL webhook Discord invalide",
+        "serverError": "Impossible de contacter le serveur"
+      }
+    },
+    "guide": {
+      "toggle": "Comment obtenir mon URL webhook Discord ?",
+      "step1Title": "Ouvrir les paramètres du serveur",
+      "step1Desc": "Faites un clic droit sur votre serveur Discord → \"Paramètres du serveur\" → \"Intégrations\" → \"Webhooks\".",
+      "step2Title": "Créer un webhook sur un channel dédié",
+      "step2Desc": "Cliquez sur \"Nouveau Webhook\", sélectionnez un channel dédié (ex: #splitcord-storage), donnez-lui un nom.",
+      "step3Title": "Copier l'URL du webhook",
+      "step3Desc": "Cliquez sur \"Copier l'URL du Webhook\" et collez-la dans le champ ci-dessus.",
+      "tip": "Conseil : Créez un channel privé visible uniquement par vous. Les fichiers uploadés seront stockés dans ce channel sous forme de pièces jointes."
+    }
+  },
+  "drive": {
+    "loading": "Chargement…",
+    "toolbar": {
+      "search": "Rechercher…",
+      "upload": "Uploader",
+      "filterLabel": "Filtrer par type",
+      "sortLabel": "Trier par",
+      "fileCount": "{count, plural, =1 {# fichier} other {# fichiers}}",
+      "filter": {
+        "all": "Tous les types",
+        "image": "Images",
+        "video": "Vidéos",
+        "audio": "Audio",
+        "document": "Documents",
+        "archive": "Archives",
+        "other": "Autres"
+      },
+      "sort": {
+        "createdAt_desc": "Date — récent",
+        "createdAt_asc": "Date — ancien",
+        "name_asc": "Nom A→Z",
+        "name_desc": "Nom Z→A",
+        "size_desc": "Taille — grand",
+        "size_asc": "Taille — petit"
+      }
+    },
+    "sidebar": {
+      "myDrive": "Mon Drive",
+      "storage": "Stockage utilisé",
+      "files": "Fichiers",
+      "discordMessages": "Messages Discord",
+      "webhookId": "Webhook ID",
+      "disconnect": "Déconnecter"
+    },
+    "empty": {
+      "title": "Votre Drive est vide",
+      "description": "Uploadez vos premiers fichiers. Ils seront découpés en chunks et stockés sur Discord via votre webhook.",
+      "cta": "Uploader un fichier",
+      "dragHint": "Ou glissez-déposez des fichiers n'importe où sur la page",
+      "noResults": "Aucun résultat",
+      "noResultsFor": "Aucun fichier ne correspond à \"{query}\"",
+      "noResultsType": "Aucun fichier dans cette catégorie"
+    },
+    "file": {
+      "download": "Télécharger",
+      "exportRadis": "Exporter .radis",
+      "rename": "Renommer",
+      "share": "Partager",
+      "preview": "Aperçu",
+      "copyLink": "Copier le lien",
+      "moveTo": "Déplacer vers",
+      "delete": "Supprimer",
+      "radisExported": "Manifeste .radis exporté"
+    },
+    "list": {
+      "name": "Nom",
+      "type": "Type",
+      "size": "Taille",
+      "chunks": "Chunks",
+      "date": "Date"
+    },
+    "upload": {
+      "titleActive": "Upload en cours ({count})",
+      "titleDone": "Uploads terminés",
+      "clear": "Effacer",
+      "idle": "En attente",
+      "chunking": "Découpage…",
+      "uploading": "{uploaded}/{total} chunks",
+      "completing": "Finalisation…",
+      "done": "Terminé",
+      "error": "Erreur"
+    },
+    "delete": {
+      "title": "Supprimer le fichier",
+      "description": "Cette action supprimera définitivement {name} ainsi que tous ses messages Discord ({count, plural, =1 {# chunk} other {# chunks}}). Cette action est irréversible.",
+      "cancel": "Annuler",
+      "confirm": "Supprimer",
+      "deleting": "Suppression…"
+    },
+    "download": {
+      "started": "Téléchargement de \"{name}\" démarré",
+      "deleted": "\"{name}\" supprimé",
+      "fetching": "Connexion à Discord…",
+      "downloading": "Téléchargement en cours…",
+      "verifying": "Vérification SHA-256…",
+      "done": "Terminé",
+      "error": "Erreur",
+      "checksumMismatch": "Intégrité compromise !"
+    }
+  },
+  "language": {
+    "select": "Langue",
+    "fr": "Français",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "pt": "Português",
+    "ja": "日本語",
+    "zh": "中文"
+  }
+}
